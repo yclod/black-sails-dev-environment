@@ -10,5 +10,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "datasource" do |datasource|
 	datasource.vm.box = "hashicorp/precise64"
 	datasource.vm.synced_folder black_sails_datasource, "/home/vagrant/black_sails_datasource"
+	datasource.vm.synced_folder "thirdparty", "/home/vagrant/thirdparty"
+	datasource.vm.provision "shell", path: "config.sh"
   end
 end
