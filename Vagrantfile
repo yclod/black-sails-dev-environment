@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
 	datasource.vm.synced_folder black_sails_datasource, "/home/ubuntu/black_sails_datasource"
 	datasource.vm.synced_folder black_sails_ctp, "/home/ubuntu/black_sails_ctp"
 	datasource.vm.synced_folder "thirdparty", "/home/ubuntu/thirdparty"
+	datasource.vm.provision :shell, :inline => "sudo rm /etc/localtime && sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime", run: "always"
 	datasource.vm.provision "shell", path: "config.sh"
   end
 end
