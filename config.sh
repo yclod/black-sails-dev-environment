@@ -8,6 +8,7 @@ sudo apt-get update
 # sudo python3.4 /home/ubuntu/thirdparty/get-pip.py
 
 #install and setup emcas25
+sudo apt-get install silversearcher-ag
 echo | sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt-get update
 sudo apt-get install emacs25 -y
