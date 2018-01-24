@@ -16,7 +16,7 @@ cp thirdparty/init.el /home/ubuntu/.emacs.d/init.el
 cp -r thirdparty/themes /home/ubuntu/.emacs.d/
 
 #install Anaconda
-curl https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86.sh -p /home/ubuntu/thirdparty/
+curl https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh > /home/ubuntu/thirdparty/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo chmod +x /home/ubuntu/thirdparty/Anaconda3-5.0.1-Linux-x86_64.sh
 sudo -u ubuntu /home/ubuntu/thirdparty/Anaconda3-5.0.1-Linux-x86_64.sh -b
 echo 'export PATH=/home/ubuntu/anaconda3/bin:$PATH' >>/home/ubuntu/.profile
